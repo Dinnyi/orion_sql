@@ -466,8 +466,9 @@ and b_albumid in ('167544','211725','104340','170320','242137','142550','2020847
 //  懒人听书资源验证
 
 select
-count(DISTINCT b_sid),
-count(DISTINCT p_serial)
+-- count(DISTINCT b_sid),
+-- count(DISTINCT p_serial)
+b_query,b_answertext
 from data_xy_b_content_asr_nlp_all
 WHERE insert_time BETWEEN STR_TO_DATE('2018-04-02 00:00:00','%Y-%m-%d %H:%i:%s') AND STR_TO_DATE('2018-08-05 00:00:00','%Y-%m-%d %H:%i:%s')
 -- 排查异常设备 START
